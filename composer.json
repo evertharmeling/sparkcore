@@ -1,0 +1,29 @@
+{
+    "name": "evertharmeling/sparkcore",
+    "description": "PHP classes who help interacting with the sparkcore. For example consume Server Side Events.",
+    "keywords": ["sparkcore", "spark.io", "sse", "server side events"],
+    "homepage": "https://github.com/evertharmeling/sparkcore",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Evert Harmeling",
+            "email": "evertharmeling@hotmail.com",
+            "homepage": "https://twitter.com/evertjes"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "psr/log": "1.0.*@dev"
+    },
+    "autoload": {
+        "psr-0": {
+            "SparkCore": "lib/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
