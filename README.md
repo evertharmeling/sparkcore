@@ -19,7 +19,7 @@ In its most simple form, you need to extended the class and implement an enqueue
 namespace MyApp\MyBundle\Stream;
 
 use SparkCore\Stream\Event\SparkEvent;
-use SparkCore\Stream\Sparkhose as BaseSparkHose;
+use SparkCore\Stream\Sparkhose as BaseSparkhose;
 
 class Sparkhose extends BaseSparkhose
 {
@@ -42,7 +42,7 @@ Now your able to initiate your own `Sparkhose` class:
 
 use MyApp\MyBundle\Stream\Sparkhose;
 
-$sparkhose = new SparkHose('spark_device_id', 'spark_access_token');
+$sparkhose = new Sparkhose('spark_device_id', 'spark_access_token');
 $sparkhose->consume();
 
 ```
@@ -56,7 +56,7 @@ Optionally you can listen to a specific event by setting the 'event_name' on the
 
 use MyApp\MyBundle\Stream\Sparkhose;
 
-$sparkhose = new SparkHose('spark_device_id', 'spark_access_token');
+$sparkhose = new Sparkhose('spark_device_id', 'spark_access_token');
 $sparkhose->setEventName('event_name');
 $sparkhose->consume();
 
@@ -74,7 +74,7 @@ use MyApp\MyBundle\Stream\Sparkhose;
 
 $logger = new MyLogger();
 
-$sparkhose = new SparkHose('spark_device_id', 'spark_access_token');
+$sparkhose = new Sparkhose('spark_device_id', 'spark_access_token');
 $sparkhose->setLogger($logger);
 $sparkhose->consume();
 
